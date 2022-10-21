@@ -85,6 +85,7 @@ img {
   line-height: 1.2;
   text-decoration: none;
 }
+
 .logo-nav > span {
   color: var(--accent-text-color);
 }
@@ -99,6 +100,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms;
 }
 
 .site-nav {
@@ -142,6 +144,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms , fill 250ms;
 }
 
 .auth-nav .svg {
@@ -153,7 +156,6 @@ img {
   color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
-
 
 /* section decision */
 .hero {
@@ -185,9 +187,11 @@ img {
 }
 /*hero-button*/
 .hero-button {
-  border-radius: 4px;
+  display: flex;
   padding: 10px 32px;
   margin: 0 auto;
+  justify-content: center;
+  border-radius: 4px;
 
   color: var(--white-text-color);
   background-color: var(--accent-text-color);
@@ -196,11 +200,11 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
   letter-spacing: 0.06em;
   cursor: pointer;
   text-decoration: none;
-  justify-content: center;
+  transition: color 250ms , background-color 250ms;
+  
 }
 
 .hero-button:hover,
@@ -355,6 +359,7 @@ img {
   border-radius: 50%;
   fill: var(--background-color-icon);
   background-color: var(--white-text-color);
+  transition: fill 250ms , background-color 250ms;
 }
 
 .command-social-link:hover,
@@ -377,6 +382,7 @@ img {
   margin-left: auto;
   gap: 30px;
 }
+
 .clients-link {
   display: flex;
   width: 170px;
@@ -389,6 +395,7 @@ img {
   border-radius: 4px;
   fill: var(--background-color-icon);
   cursor: pointer;
+  transition: fill 250ms , border-color 250ms;
 }
 
 .clients-link:hover,
@@ -433,6 +440,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color 250ms;
 }
 .footer-adress .item {
   margin-right: 70px;
@@ -443,10 +451,11 @@ img {
 
 .footer-adress .text {
   color: var(--white-text-color);
+  transition: color 250ms;
 }
 
-.footer-adress p:hover,
-.footer-adress p:focus {
+.footer-adress .text:hover,
+.footer-adress .text:focus {
   color: var(--accent-text-color);
 }
 
@@ -475,6 +484,7 @@ img {
   border-radius: 50%;
   fill: var(--white-text-color);
   background-color: var(--background-footer-color-icon);
+  transition: background-color 250ms;
 }
 
 .footer-social-link:hover,
@@ -503,6 +513,7 @@ img {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  transition: color 250ms , background-color 250ms , box-shadow 250ms;
 }
 
 .button:hover,
@@ -551,16 +562,17 @@ img {
 .example-list .link {
   display: block;
   text-decoration: none;
+  transition: box-shadow 250ms;
 }
 
 .example-list  .link:hover,
 .example-list  .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .example-item-thumb {
   position: relative;
-  overflow: hidden;
-  
+  overflow: hidden; 
 }
 
 .example-item-description {
