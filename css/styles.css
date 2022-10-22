@@ -103,7 +103,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms var(--transition-cubic-bezier);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .site-nav {
@@ -129,7 +131,9 @@ img {
   height: 4px;
   background-color: currentcolor;
   border-radius: 2px;
-  transition: opacity 250ms var(--transition-cubic-bezier);
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
   content: '';
 }
 
@@ -167,7 +171,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms var(--transition-cubic-bezier) , fill 250ms var(--transition-cubic-bezier);
+  transition-property: color , fill;
+  transition-duration: 250ms , 250ms;
+  transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
 }
 
 .auth-nav .svg {
@@ -226,7 +232,9 @@ img {
   letter-spacing: 0.06em;
   cursor: pointer;
   text-decoration: none;
-  transition: color 250ms var(--transition-cubic-bezier) , background-color 250ms var(--transition-cubic-bezier);
+  transition-property: color , background-color;
+  transition-duration: 250ms , 250ms;
+  transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
 }
 
 .hero-button:hover,
@@ -381,7 +389,9 @@ img {
   border-radius: 50%;
   fill: var(--background-color-icon);
   background-color: var(--white-text-color);
-  transition: fill 250ms var(--transition-cubic-bezier) , background-color 250ms var(--transition-cubic-bezier);
+  transition-property: fill , background-color;
+  transition-duration: 250ms , 250ms;
+  transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
 }
 
 .command-social-link:hover,
@@ -417,7 +427,9 @@ img {
   border-radius: 4px;
   fill: var(--background-color-icon);
   cursor: pointer;
-  transition: fill 250ms var(--transition-cubic-bezier) , border-color 250ms var(--transition-cubic-bezier);
+  transition-property: fill , border-color;
+  transition-duration: 250ms , 250ms;
+  transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
 }
 
 .clients-link:hover,
@@ -462,7 +474,9 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  transition: color 250ms var(--transition-cubic-bezier);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .footer-adress .item {
@@ -474,7 +488,9 @@ img {
 
 .footer-adress .text {
   color: var(--white-text-color);
-  transition: color 250ms var(--transition-cubic-bezier);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .footer-adress .text:hover,
@@ -507,7 +523,9 @@ img {
   border-radius: 50%;
   fill: var(--white-text-color);
   background-color: var(--background-footer-color-icon);
-  transition: background-color 250ms var(--transition-cubic-bezier);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .footer-social-link:hover,
@@ -536,7 +554,9 @@ img {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  transition: color 250ms var(--transition-cubic-bezier) , background-color 250ms var(--transition-cubic-bezier) , box-shadow 250ms var(--transition-cubic-bezier);
+  transition-property: color , backgraund-color , box-shadow;
+  transition-duration: 250ms , 250ms , 250ms;
+  transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
 }
 
 .button:hover,
@@ -585,7 +605,9 @@ img {
 .example-list .link {
   display: block;
   text-decoration: none;
-  transition: box-shadow 250ms var(--transition-cubic-bezier);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .example-list  .link:hover,
@@ -608,7 +630,9 @@ img {
   color: var(--white-text-color);
   background-color: var(--backgraund-color-example);
   transform: translateY(100%);
-  transition: transform 250ms var(--transition-cubic-bezier);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-cubic-bezier);
 }
 
 .example-item-thumb:hover .example-item-description{
@@ -672,7 +696,20 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+z-index: 1;
 background-color: var(--background-color-modal);
+transition-property: opacity , visibility;
+transition-duration: 250ms , 250ms;
+transition-timing-function: var(--transition-cubic-bezier) , var(--transition-cubic-bezier);
+
+}
+
+ .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition-duration: 500ms;
 }
 
 .modal {
@@ -687,8 +724,6 @@ background-color: var(--background-color-modal);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-
-
 
 .modal-close-button {
   display: flex;
@@ -705,8 +740,3 @@ background-color: var(--background-color-modal);
   cursor: pointer;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
